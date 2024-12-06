@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="479.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentHomepageController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Dashboard">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Welcome">
+                           <font>
+                              <Font name="Times New Roman" size="38.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+          <Tab text="Notifications">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TableView fx:id="notification" prefHeight="516.0" prefWidth="694.0">
+                          <columns>
+                            <TableColumn fx:id="notificationMessage" prefWidth="128.80001527071" text="Notification Type" />
+                            <TableColumn fx:id="notificationType" prefWidth="410.40003967285156" text="Notification" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+            <Tab text="Available Courses">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="382.0" prefWidth="694.0">
+                     <children>
+                        <TableView fx:id="availableCourses" prefHeight="229.0" prefWidth="694.0">
+                          <columns>
+                              <TableColumn fx:id="availableCourseID" prefWidth="75.0" text="Course ID" />
+                            <TableColumn id="CourseName" fx:id="availableCourseName" prefWidth="212.80001527071" text="Course Name" />
+                            <TableColumn id="CourseDescription" fx:id="availableCourseDescription" prefWidth="221.59999084472656" text="Course Description" />
+                          </columns>
+                        </TableView>
+                        <Label prefHeight="28.0" prefWidth="178.0" text="Enroll In a Course: ">
+                           <font>
+                              <Font name="Times New Roman" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldCourseID" promptText="Enter Course ID" />
+                        <TextField fx:id="textFieldStudentID" promptText=" Enter Student ID" />
+                        <Button mnemonicParsing="false" onAction="#enrollInACourse" text="Enroll" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+          <Tab text="Available Exams">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="202.0" prefWidth="694.0">
+                     <children>
+                        <TableView fx:id="availableExamCourses" prefHeight="232.0" prefWidth="694.0">
+                          <columns>
+                            <TableColumn id="examID" fx:id="availableExamExamID" prefWidth="62.39999467134476" text="Exam ID" />
+                            <TableColumn id="courseID" fx:id="availableExamCourseID" minWidth="0.0" prefWidth="60.799983978271484" text="Course ID" />
+                              <TableColumn id="courseType" fx:id="availableExamCourseType" prefWidth="52.79998779296875" text="Type" />
+                              <TableColumn id="courseTitle" fx:id="availableExamCourseTitle" prefWidth="266.40003967285156" text="Title" />
+                              <TableColumn id="instruction" fx:id="availableExamCourseInstruction" prefWidth="262.4000244140625" text="Instruction" />
+                          </columns>
+                        </TableView>
+                        <Label prefHeight="26.0" prefWidth="242.0" text="Give an Exam Right Now:">
+                           <font>
+                              <Font name="Times New Roman" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textFieldExamID" promptText="Enter Exam ID" />
+                        <Button mnemonicParsing="false" onAction="#giveExam" text="Give an exam On Console" />
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

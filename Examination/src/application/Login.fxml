@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="442.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <TabPane prefHeight="578.0" prefWidth="546.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Login">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Login as: " />
+                        <ComboBox fx:id="comboBox" onAction="#SelectLogin" prefHeight="26.0" prefWidth="130.0" promptText="Select User Type" />
+                        <TextField fx:id="loginEmailField" promptText="Email" />
+                        <PasswordField fx:id="loginPasswordField" promptText="Password" />
+                        <Button mnemonicParsing="false" onAction="#handleLogin" text="Login" />
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab text="SignUp">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="SignUp as:" />
+                        <ComboBox fx:id="comboBox1" onAction="#SelectSignUp" prefHeight="26.0" prefWidth="130.0" promptText="Select User Type" />
+                        <TextField fx:id="signupNameField" promptText="Name" />
+                        <TextField fx:id="signupEmailField" promptText="Email" />
+                        <PasswordField fx:id="signupPasswordField" promptText="Password" />
+                        <Button mnemonicParsing="false" onAction="#handleSignup" text="SignUp" />
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
